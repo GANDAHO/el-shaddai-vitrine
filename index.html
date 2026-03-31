@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complexe Scolaire Privé EL-SHADDAÏ</title>
+    
+    <meta name="description" content="Complexe Scolaire Privé EL-SHADDAÏ. Une école d'excellence alliant rigueur, discipline et suivi numérique de vos enfants.">
+    <meta property="og:title" content="Inscriptions Ouvertes - Complexe Scolaire EL-SHADDAÏ">
+    <meta property="og:description" content="Offrez à votre enfant une école où chaque résultat est suivi, compris et maîtrisé. Découvrez notre pédagogie.">
+    <meta property="og:image" content="static/img/logo.png">
+    <meta property="og:url" content="https://el-shaddai-ecole.com">
+    <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'school-blue': '#1e3a8a',
+                        'school-gold': '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.8);
+            transform: translateY(-2px);
+        }
+        
+        @keyframes shake-action {
+            0%, 100% { transform: translateX(0) translateY(0) rotate(0) scale(1); }
+            10% { transform: translateX(-4px) translateY(-2px) rotate(-2deg) scale(1.02); }
+            20% { transform: translateX(4px) translateY(2px) rotate(2deg) scale(1.02); }
+            30% { transform: translateX(-4px) translateY(2px) rotate(-2deg) scale(1.02); }
+            40% { transform: translateX(4px) translateY(-2px) rotate(2deg) scale(1.02); }
+            50% { transform: translateX(-2px) translateY(0) rotate(-1deg) scale(1.01); }
+            60% { transform: translateX(2px) translateY(0) rotate(1deg) scale(1.01); }
+            70%, 100% { transform: translateX(0) translateY(0) rotate(0) scale(1); }
+        }
+        .btn-shake-action {
+            animation: shake-action 1.2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center relative">
+            
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-school-blue rounded-full flex items-center justify-center text-white font-bold overflow-hidden shadow-inner">
+                    <img src="static/img/logo.png" alt="Logo EL-SHADDAÏ" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" class="w-full h-full object-cover">
+                    <i class="fa-solid fa-graduation-cap text-school-gold hidden"></i>
+                </div>
+                <span class="font-extrabold text-xl md:text-2xl text-school-blue tracking-tight">EL-SHADDAÏ</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 font-semibold text-sm text-gray-600 items-center">
+                <a href="#pedagogie" class="hover:text-school-gold transition">Pédagogie</a>
+                <a href="#vie-scolaire" class="hover:text-school-gold transition">Notre Quotidien</a>
+                <a href="#tarifs" class="hover:text-school-gold transition">Inscriptions <span id="annee-menu" class="text-xs bg-school-gold text-white px-2 py-0.5 rounded-full ml-1"></span></a>
+            </div>
+            
+           <button onclick="inscrireViaWhatsApp('non précisé')" class="btn-glow btn-shake-action bg-school-gold text-white px-8 py-4 rounded-full font-bold text-lg flex items-center">
+                    INSRIPTION <i class="fa-brands fa-whatsapp ml-3 text-xl"></i>
+            </button>
+
+            <button id="mobile-menu-btn" class="md:hidden text-school-blue focus:outline-none text-2xl p-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg pb-4 px-4 flex-col space-y-4 pt-4">
+            <a href="#pedagogie" class="mobile-link text-gray-800 font-bold text-lg hover:text-school-gold">Pédagogie</a>
+            <a href="#vie-scolaire" class="mobile-link text-gray-800 font-bold text-lg hover:text-school-gold">Notre Quotidien</a>
+            <a href="#tarifs" class="mobile-link text-gray-800 font-bold text-lg hover:text-school-gold">Inscriptions</a>
+            <a href="https://TON-APP-FLASK.onrender.com/inscription" class="bg-school-gold text-white px-6 py-3 rounded-xl font-bold text-center mt-2 shadow-md">
+                S'inscrire maintenant
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative pt-40 pb-24 px-4 bg-cover bg-center text-white text-center overflow-hidden" style="background-image: url('static/img/hero-bg.jpg');">
+        <div class="absolute inset-0 bg-school-blue/90 backdrop-blur-[2px]"></div>
+
+        <div class="absolute top-20 left-10 w-32 h-32 bg-school-gold rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10" data-aos="fade-up">
+            <span class="inline-block py-1 px-4 rounded-full bg-blue-800/80 text-blue-100 text-sm font-bold mb-6 border border-blue-500 shadow-inner backdrop-blur-sm">
+                🚀 Les inscriptions sont ouvertes pour <span id="annee-academique"></span>
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 leading-tight tracking-tighter">
+                Offrez à votre enfant une école où chaque résultat est <span class="text-school-gold">suivi, compris et maîtrisé.</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-6 text-blue-100 font-light max-w-3xl mx-auto leading-relaxed">
+                Aujourd’hui, réussir à l’école ne dépend plus seulement des cours. Cela repose sur un suivi régulier, une discipline structurée et une communication claire avec les parents.
+            </p>
+            <p class="text-lg md:text-xl mb-12 text-white font-semibold max-w-3xl mx-auto leading-relaxed">
+                À EL-SHADDAÏ, nous avons fait le choix d’allier exigence académique et outils numériques pour vous garantir une visibilité totale sur le parcours de votre enfant.
+            </p>
+            <div class="flex justify-center mt-4">
+                <button onclick="inscrireViaWhatsApp('non précisé')" class="btn-glow btn-shake-action bg-school-gold text-white px-8 py-4 rounded-full font-bold text-lg flex items-center">
+                    INSRIPTION <i class="fa-brands fa-whatsapp ml-3 text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pedagogie" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-school-blue mb-4">Pourquoi choisir EL-SHADDAÏ ?</h2>
+            <div class="w-24 h-1 bg-school-gold mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-50 transform hover:-translate-y-2 transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-16 h-16 bg-blue-50 text-school-blue rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Suivi Numérique 2.0</h3>
+                <p class="text-school-gold font-semibold mb-4 border-b border-gray-100 pb-3">Fini les zones d’ombre.</p>
+                <ul class="text-gray-600 space-y-2 mb-6 flex-grow text-sm md:text-base">
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Reçus envoyés instantanément via WhatsApp</li>
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Suivi régulier des performances scolaires</li>
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Informations accessibles sans se déplacer</li>
+                </ul>
+                <div class="bg-blue-50 text-school-blue p-4 rounded-xl text-sm font-bold mt-auto">
+                    👉 Vous savez exactement où en est votre enfant.
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-50 transform hover:-translate-y-2 transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-16 h-16 bg-yellow-50 text-school-gold rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Rigueur & Discipline</h3>
+                <p class="text-school-gold font-semibold mb-4 border-b border-gray-100 pb-3">De bonnes habitudes.</p>
+                <ul class="text-gray-600 space-y-2 mb-6 flex-grow text-sm md:text-base">
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Encadrement structuré et constant</li>
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Respect des horaires et des consignes</li>
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Suivi individuel des élèves</li>
+                </ul>
+                <div class="bg-yellow-50 text-yellow-800 p-4 rounded-xl text-sm font-bold mt-auto">
+                    👉 Concentration, autonomie et sens de l’effort.
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-50 transform hover:-translate-y-2 transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-16 h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Excellence des Résultats</h3>
+                <p class="text-school-gold font-semibold mb-4 border-b border-gray-100 pb-3">Des résultats qui se construisent.</p>
+                <ul class="text-gray-600 space-y-2 mb-6 flex-grow text-sm md:text-base">
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Enseignants qualifiés et engagés</li>
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Évaluations régulières</li>
+                    <li><i class="fa-solid fa-angle-right text-school-blue mr-2"></i> Préparation sérieuse au CEP</li>
+                </ul>
+                <div class="bg-green-50 text-green-700 p-4 rounded-xl text-sm font-bold mt-auto">
+                    👉 Amener chaque élève à donner le meilleur.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vie-scolaire" class="py-24 px-4 bg-gray-900 text-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-extrabold mb-4">Notre quotidien</h2>
+                <div class="w-24 h-1 bg-school-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto mb-4">
+                    Une école ne se résume pas à un discours. À EL-SHADDAÏ, chaque journée est rythmée par l’apprentissage, les activités éducatives et l’encadrement de proximité.
+                </p>
+                <p class="text-school-gold font-bold text-xl">👉 Nos images parlent pour nous.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="w-full max-w-[325px] bg-black rounded-2xl shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gniel1000/video/7623138449079454994" data-video-id="7623138449079454994" style="max-width: 325px; min-width: 325px;"> <section> <a target="_blank" title="@gniel1000" href="https://www.tiktok.com/@gniel1000?refer=embed">@gniel1000</a> </section> </blockquote>
+                </div>
+                <div class="w-full max-w-[325px] bg-black rounded-2xl shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gniel1000/video/7615257431018343698" data-video-id="7615257431018343698" style="max-width: 325px; min-width: 325px;"> <section> <a target="_blank" title="@gniel1000" href="https://www.tiktok.com/@gniel1000?refer=embed">@gniel1000</a> </section> </blockquote>
+                </div>
+                <div class="w-full max-w-[325px] bg-black rounded-2xl shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gniel1000/video/7604839271542902034" data-video-id="7604839271542902034" style="max-width: 325px; min-width: 325px;"> <section> <a target="_blank" title="@gniel1000" href="https://www.tiktok.com/@gniel1000?refer=embed">@gniel1000</a> </section> </blockquote>
+                </div>
+                <div class="w-full max-w-[325px] bg-black rounded-2xl shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gniel1000/video/7585975477509082424" data-video-id="7585975477509082424" style="max-width: 325px; min-width: 325px;"> <section> <a target="_blank" title="@gniel1000" href="https://www.tiktok.com/@gniel1000?refer=embed">@gniel1000</a> </section> </blockquote>
+                </div>
+                <div class="w-full max-w-[325px] bg-black rounded-2xl shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gniel1000/video/7582602197108673848" data-video-id="7582602197108673848" style="max-width: 325px; min-width: 325px;"> <section> <a target="_blank" title="@gniel1000" href="https://www.tiktok.com/@gniel1000?refer=embed">@gniel1000</a> </section> </blockquote>
+                </div>
+                <div class="w-full max-w-[325px] bg-black rounded-2xl shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gniel1000/video/7579147891999132984" data-video-id="7579147891999132984" style="max-width: 325px; min-width: 325px;"> <section> <a target="_blank" title="@gniel1000" href="https://www.tiktok.com/@gniel1000?refer=embed">@gniel1000</a> </section> </blockquote>
+                </div>
+                <div class="w-full max-w-[325px] bg-black rounded-2xl shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gniel1000/video/7575820197571972408" data-video-id="7575820197571972408" style="max-width: 325px; min-width: 325px;"> <section> <a target="_blank" title="@gniel1000" href="https://www.tiktok.com/@gniel1000?refer=embed">@gniel1000</a> </section> </blockquote>
+                </div>
+                <div class="w-full max-w-[325px] bg-black rounded-2xl shadow-2xl overflow-hidden" data-aos="zoom-in">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@gniel1000/video/7566576071462702347" data-video-id="7566576071462702347" style="max-width: 325px; min-width: 325px;"> <section> <a target="_blank" title="@gniel1000" href="https://www.tiktok.com/@gniel1000?refer=embed">@gniel1000</a> </section> </blockquote>
+                </div>
+            </div>
+            
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+    </section>
+
+    <section id="tarifs" class="py-20 px-4 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-school-blue mb-4">Nos cycles de formation</h2>
+                <div class="w-24 h-1 bg-school-gold mx-auto rounded-full mb-6"></div>
+                <div class="inline-block bg-green-50 text-green-800 border border-green-200 px-6 py-3 rounded-full font-bold shadow-sm">
+                    💰 Tarif unique et transparent : 2.000 F/an
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white border-2 border-gray-100 rounded-3xl p-8 shadow-lg hover:border-school-blue transition duration-300 flex flex-col" data-aos="fade-up">
+                    <h3 class="text-2xl font-extrabold mb-2 text-school-blue">👶 Maternelle</h3>
+                    <p class="text-gray-500 mb-6 border-b border-gray-100 pb-4 text-sm">(Petite, Moyenne, Grande section)</p>
+                    <ul class="space-y-3 mb-8 text-gray-700 flex-grow text-sm md:text-base">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-school-blue mt-1 mr-3"></i> Éveil intellectuel et social</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-school-blue mt-1 mr-3"></i> Suivi personnalisé dès le bas âge</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-school-blue mt-1 mr-3"></i> Introduction progressive aux bases</li>
+                    </ul>
+                    <div class="bg-green-50 text-green-700 font-bold p-3 rounded-lg text-center mb-6 text-sm">
+                        ✔ Frais d’inscription inclus
+                    </div>
+                   <button onclick="inscrireViaWhatsApp('Maternelle')" class="w-full text-center bg-gray-50 text-school-blue border border-gray-200 font-bold py-3 rounded-xl hover:bg-school-blue hover:text-white transition">
+                    Inscrire en Maternelle via WhatsApp <i class="fa-brands fa-whatsapp ml-2 text-green-500"></i>
+                   </button>
+                </div>
+
+                <div class="bg-white border-2 border-gray-100 rounded-3xl p-8 shadow-lg hover:border-school-blue transition duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-extrabold mb-2 text-school-blue">📘 Primaire</h3>
+                    <p class="text-gray-500 mb-6 border-b border-gray-100 pb-4 text-sm">(Du CI au CM2)</p>
+                    <ul class="space-y-3 mb-8 text-gray-700 flex-grow text-sm md:text-base">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-school-blue mt-1 mr-3"></i> Programme officiel respecté et renforcé</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-school-blue mt-1 mr-3"></i> Organisation d’examens blancs</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-school-blue mt-1 mr-3"></i> Préparation intensive au CEP</li>
+                    </ul>
+                    <div class="bg-blue-50 text-school-blue font-bold p-3 rounded-lg text-center mb-6 text-sm">
+                        👉 Arriver au CEP avec confiance.
+                    </div>
+                    <button onclick="inscrireViaWhatsApp('Primaire')" class="w-full text-center bg-school-blue text-white font-bold py-3 rounded-xl hover:bg-blue-900 shadow-md transition">
+                        Inscrire en Primaire via WhatsApp <i class="fa-brands fa-whatsapp ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="localisation" class="py-20 px-4 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-school-blue mb-4">Localisation</h2>
+                <div class="w-24 h-1 bg-school-gold mx-auto rounded-full mb-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 bg-white p-6 rounded-3xl shadow-xl border border-gray-100" data-aos="fade-up">
+                <div class="lg:col-span-1 flex flex-col justify-center space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-50 text-school-blue rounded-full flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Adresse</h4>
+                            <p class="text-gray-600 text-sm mt-1">📌 Quartier N’Vènamèdé, Akpakpa<br>Cotonou, Bénin</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-green-50 text-green-600 rounded-full flex items-center justify-center mr-4 shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Contact</h4>
+                            <p class="text-gray-600 text-sm mt-1">📞 +229 01 52 45 43 79</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=6.3728838,2.4628605" target="_blank" class="text-center bg-gray-900 text-white font-bold py-3 rounded-xl hover:bg-school-blue transition mt-4">
+                        Google Maps
+                    </a>
+                </div>
+                
+                <div class="lg:col-span-2 h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-inner">
+                    <iframe src="https://maps.google.com/maps?q=6.3728838,2.4628605&z=15&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center border-t-4 border-school-gold">
+        <div class="max-w-7xl mx-auto px-4">
+            <h4 class="text-white text-xl md:text-2xl font-extrabold mb-4 flex items-center justify-center">
+                <i class="fa-solid fa-graduation-cap text-school-gold mr-3"></i> EL-SHADDAÏ
+            </h4>
+            <p class="text-xs md:text-sm border-t border-gray-800 pt-6 mt-4">
+                © <span id="current-year"></span> EL-SHADDAÏ. Propulsé par notre système d'information exclusif.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Gestion de l'année scolaire
+            const date = new Date();
+            const currentYear = date.getFullYear();
+            const currentMonth = date.getMonth() + 1; 
+
+            let anneeAcademique = "";
+            if (currentMonth < 9) {
+                anneeAcademique = (currentYear - 1) + " - " + currentYear;
+            } else {
+                anneeAcademique = currentYear + " - " + (currentYear + 1);
+            }
+
+            document.getElementById("annee-academique").innerText = anneeAcademique;
+            document.getElementById("annee-menu").innerText = anneeAcademique;
+            document.getElementById("current-year").innerText = currentYear;
+
+            // Script du menu Hamburger (Mobile)
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+            });
+
+            // Fermer le menu mobile quand on clique sur un lien
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    menu.classList.remove('flex');
+                });
+            });
+        });
+
+        function inscrireViaWhatsApp(cycle) {
+        // Ton numéro de téléphone (sans le +, avec l'indicatif)
+        const numero = "2290164831666"; 
+        
+        // Le message pré-écrit qui s'affichera chez le parent
+        const message = `Bonjour la direction d'EL-SHADDAÏ ! 🎓%0AJe vous contacte depuis votre site web. Je souhaite avoir les modalités pour inscrire mon enfant au cycle *${cycle}*.`;
+        
+        // Redirection vers l'application WhatsApp
+        window.open(`https://wa.me/${numero}?text=${message}`, '_blank');
+    }
+    </script>
+</body>
+</html>
